@@ -14,8 +14,7 @@ sed -i '/ro.apex.updatable/d' $systemdir/build.prop
 sed -i '/ro.apex.updatable/d' $systemdir/product/etc/build.prop
 sed -i '/ro.apex.updatable/d' $systemdir/system_ext/etc/build.prop
 
-apex_flatten() {
-	# Force use flatten apex
+# Force use flatten apex
   echo "" >> $systemdir/product/etc/build.prop
   echo "# Apex state" >> $systemdir/product/etc/build.prop  
   echo "ro.apex.updatable=false" >> $systemdir/product/etc/build.prop
